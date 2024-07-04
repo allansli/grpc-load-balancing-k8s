@@ -1,0 +1,18 @@
+syntax = "proto3";
+package br.com.elo.transacao.autorizacao.nucleo.grpc;
+ 
+service Nucleo {
+    rpc process(NucleoRequest) returns (NucleoResponse) {}
+}
+ 
+message NucleoRequest {
+    string nrid = 1;
+    string clientAddress = 2;
+    bytes data = 3;
+}
+ 
+message NucleoResponse {
+    string nrid = 1;
+    string clientAddress = 2;
+    bytes data = 3;
+}

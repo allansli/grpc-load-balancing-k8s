@@ -1,0 +1,18 @@
+syntax = "proto3";
+package br.com.elo.transacao.autorizacao.roteamento.grpc;
+ 
+service Roteamento {
+    rpc process(RoteamentoRequest) returns (RoteamentoResponse) {}
+}
+ 
+message RoteamentoRequest {
+    string nrid = 1;
+    string clientAddress = 2;
+    bytes data = 3;
+}
+ 
+message RoteamentoResponse {
+    string nrid = 1;
+    string clientAddress = 2;
+    bytes data = 3;
+}
